@@ -1,0 +1,13 @@
+{
+  "name": "mermas",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path":"/",
+      "proxyUrl": "http://fclero.org.py:8585/ws-paresa/paresa/public/index.php/mermas/"
+    }
+  ]
+}

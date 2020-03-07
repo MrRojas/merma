@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar class="new-background-color">
+        <ion-img style="max-width: 150px; max-height: 80px;" src="../../assets/logo3.jpeg" class="logo"></ion-img>
+        <ion-buttons slot="primary">
+            <ion-button color="white" (click)="logout()">
+                <ion-icon slot="icon-only" name="exit"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="theme-bg"></div>
+
+
+   
+        
+       
+            <ion-button  expand="block" style="border-radius: 0px" size="" color="primary" (click)="addMerma()" fill="solid">
+                <ion-icon name="add"></ion-icon>
+                AGREGAR PROVEEDOR
+            </ion-button>
+            <ion-button expand="block" style="border-radius: 0px" id='b1' size="" color="primary" (click)="addCategoria()" fill="solid">
+                <ion-icon name="keypad"></ion-icon>
+                AGREGAR CATEGORIA
+            </ion-button>
+            <ion-button expand="block" style="border-radius: 0px" id='b1' size="" color="primary" (click)="goRouter(1)" fill="solid">
+                <ion-icon name="cart"></ion-icon>
+                NUEVA COMPRA
+            </ion-button>
+            <ion-button expand="block" style="border-radius: 0px" id='b1' size="" color="primary" (click)="goRouter(2)" fill="solid">
+                <ion-icon name="cash"></ion-icon>
+                CONTINUAR COMPRA
+            </ion-button>
+            <ion-button expand="block" style="border-radius: 0px" id='b1' size="" color="primary" (click)="goRouter(3)" fill="solid">
+                <ion-icon name="list-box"></ion-icon>
+                REPORTES
+            </ion-button>
+     
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-buttons>
+            <ion-button color="primary" (click)="synchronize()" fill="solid">
+                Sincronizar
+                <ion-icon slot="end" name="refresh"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar  >
+  	      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title> Listado de Proveedores </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid  >
+    <ion-row>
+      <ion-col >
+        <ion-list *ngFor="let proveedor of proveedores  ;">
+                
+  
+               	<ion-item>
+                  <h4><strong> Nombre del Proveedor:</strong>  {{ proveedor.razonSocial }} </h4>
+
+
+                
+                 </ion-item>
+
+
+          
+                  <ion-item>
+                    <h4><strong> Email:</strong>  {{ proveedor.mail }} </h4>
+                 </ion-item>
+
+
+                   <ion-item>
+                    <h4><strong> Direccion :</strong>  {{ proveedor.direccion }} </h4>
+                 </ion-item>
+
+                   <ion-item>
+                    <h4><strong> Tipo de Documento :</strong>  {{ proveedor.tipodocumento.nombre }} </h4>
+                 </ion-item>
+
+                  <ion-item>
+                    <h4><strong> Numero de Documento :</strong>  {{ proveedor.nroDocumento }} </h4>
+                 </ion-item>
+        
+                
+                 <ion-button (click)="edit(proveedor.idProveedor)" >
+                       <ion-icon name="md-book" color="mainornge"  ></ion-icon>
+                  </ion-button >
+
+                  <ion-button (click)="delete(proveedor.idProveedor , proveedor.razonSocial )"   >
+                       <ion-icon name="md-trash" color="mainornge"  ></ion-icon>
+                  </ion-button >
+                
+       
+           
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+
+</ion-content>

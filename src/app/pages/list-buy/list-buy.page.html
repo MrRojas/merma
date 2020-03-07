@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar  >
+  	      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title> Listado de Compras </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" >
+<div>
+<ngx-datatable class="material"
+       
+
+         [rows]="rows"
+        [loadingIndicator]="loadingIndicator"
+        [columns]="columns"
+      columnMode="force"
+        [headerHeight]="50"
+        [footerHeight]="0"
+        [rowHeight]="50"
+      
+        [scrollbarH]="true"
+
+          [selected]="selected"
+          [selectionType]="SelectionType.single"
+          (activate)="onActivate($event)"
+          (select)="onSelect($event)"
+       
+     >
+     </ngx-datatable>
+<!--    [limit]="5" -->
+     
+</div>
+
+</ion-content>

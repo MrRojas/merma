@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar  >
+  	      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title> Listado de Categorias </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid  >
+    <ion-row>
+      <ion-col >
+        <ion-list *ngFor="let categoria of categorias  ;" >
+                <ion-item  >
+  
+               	
+                  <h4><strong> Nombre de La Categoria:</strong> </h4> 
+                  <h4 style="margin-left: 20px" > {{ categoria.nombre }} </h4>
+             
+                  </ion-item>
+
+                  <ion-item>
+                       <p> <strong>Limite:</strong> {{ categoria.limite }} </p>
+                  </ion-item>
+
+            
+                 <ion-item  >
+                 <ion-button (click)="edit(categoria.idCategoria)" >
+                       <ion-icon name="md-book" color="mainornge"  ></ion-icon>
+                  </ion-button >
+
+                  <ion-button (click)="delete(categoria.idCategoria , categoria.nombre )"   >
+                       <ion-icon name="md-trash" color="mainornge"  ></ion-icon>
+                  </ion-button >
+                   </ion-item>
+                
+              
+           
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+
+</ion-content>

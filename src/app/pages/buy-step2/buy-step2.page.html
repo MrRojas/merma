@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Seguir con la Comprar </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="default" >
+ 
+      <ion-grid>
+          <ion-row color="primary">
+              <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+                  
+
+                      <ion-item>
+                         <ion-button (click)="takeSnap()">
+						   Cargar Foto 
+						  </ion-button>
+                    </ion-item> 
+
+                     <ion-item>    
+ 							 <img [src]="capturedSnapURL" />
+                    </ion-item> 
+
+     		 </ion-col>
+     		   </ion-row>
+    <ion-row color="primary">
+     		 <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+                      <ion-item>
+                        <ion-label position="floating">Cantidad</ion-label>
+                        <ion-textarea [(ngModel)]="compra.cantidad" name="cantidad" placeholder="Cantidad"></ion-textarea>
+                    </ion-item>  
+                          </ion-col>
+		   </ion-row>
+    <ion-row color="primary">
+<ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+                      <ion-item>
+                        <ion-label position="floating">Precio </ion-label>
+                        <ion-textarea [(ngModel)]="compra.precio" name="cantidad" placeholder="Precio"></ion-textarea>
+                    </ion-item>   
+
+               </ion-col>
+               		   </ion-row>
+                       <ion-row color="primary">
+<ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+                      <ion-item>
+                        <ion-label position="floating">Descripcion </ion-label>
+                        <ion-textarea [(ngModel)]="compra.descipcion" name="descipcion" placeholder="descipcion"></ion-textarea>
+                    </ion-item>   
+
+               </ion-col>
+                     </ion-row>
+    <ion-row color="primary">
+               <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+                    <ion-item>
+                      <ion-label position="floating">Categoria</ion-label>
+
+                      <ion-select [(ngModel)]="compra.idCategoria" name="categoria" interface="popover" multiple="false" placeholder="Selecciona una Categoria">
+
+
+
+                        <ion-select-option *ngFor="let cat of categorias" value="{{cat.idCategoria}}">{{cat.nombre}}</ion-select-option>
+                    </ion-select>
+                  
+                  </ion-item>
+
+          	 </ion-col>
+          </ion-row>
+      </ion-grid>
+
+
+
+</ion-content>
+
+<ion-footer>
+  
+      
+                <ion-button ion-padding expand="block" (click)="save()"  >
+                           Registrar la Compra
+				</ion-button>
+    
+  
+</ion-footer>

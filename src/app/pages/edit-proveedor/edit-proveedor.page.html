@@ -1,0 +1,114 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Editar Proveedor</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="default" overflow-scroll="true">
+    <form #form="ngForm" (ngSubmit)="save(form)">
+        <ion-grid>
+            <ion-row color="primary">
+                <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+                    <div class="">
+                        <ion-item class="ion-text-center" *ngIf=" merma.remoteId">
+                            <h3>Sincronizado</h3>
+                        </ion-item>
+                        <ion-item *ngIf=" merma.idproveedor">
+                            <ion-label>Marcar como Inactivo</ion-label>
+                            <ion-checkbox slot="end" name="inactivo" [(ngModel)]="merma.inactivo" color="primary"></ion-checkbox>
+                        </ion-item>
+  
+ 
+                  
+
+
+                        <!--   <ion-item>
+              <ion-label position="floating">Producto</ion-label>
+              <ion-select [(ngModel)]="merma.productoId" (ionChange)="changeProducto($event)" name="productoId" interface="popover" multiple="false" placeholder="Seleccionar...">
+                <ion-select-option *ngFor="let item of productos" (click)="changeProducto(item)" value="{{item.id}}">{{item.nombre}}</ion-select-option>
+              </ion-select>
+            </ion-item>
+-->
+                       
+                        <ion-item>
+                        <ion-label position="floating">Razon Social</ion-label>
+                       <ion-textarea [(ngModel)]="merma.razonSocial" name="razon social" placeholder=""></ion-textarea>
+                       </ion-item> 
+                        <ion-item>
+                            <ion-label position="floating">Tipo de documento</ion-label>
+                            <ion-select [(ngModel)]="merma.tipodocumentoid" (ionChange)="changeTurno($event)" name="tipoDocumento" interface="popover" multiple="false" placeholder="Seleccionar...">
+                                <ion-select-option *ngFor="let item of turnos" value="{{item.id}}">{{item.nombre}}</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label position="floating">Nro. de Documento</ion-label>
+                          <ion-input name="nrodocumento" type="number" placeholder="" [(ngModel)]=" merma.nroDocumento" required></ion-input>
+                      </ion-item>
+                            <ion-item>
+                                <ion-label position="floating">Direccion</ion-label>
+                                <ion-textarea [(ngModel)]="merma.direccion" name="direccion" placeholder=""></ion-textarea>
+                            </ion-item>     
+                               
+                                <ion-item>
+                                <ion-label position="floating">Celular</ion-label>
+                                <ion-textarea [(ngModel)]="merma.celular" name="celular" placeholder=""></ion-textarea>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label position="floating">Correo</ion-label>
+                                <ion-textarea [(ngModel)]="merma.mail" name="mail" placeholder=""></ion-textarea>
+                            </ion-item>
+
+                             <!-- 
+                            <ion-item>
+                            <ion-label> Inactivo</ion-label>
+                            <ion-checkbox slot="end" name="inactivo" [(ngModel)]="merma.inactivo" color="primary"></ion-checkbox>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label position="floating">Usuario de insercion</ion-label>
+                            <ion-textarea [(ngModel)]="merma.observaciones" name="observaciones" placeholder="Observaciones..."></ion-textarea>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating">usuario modificacion</ion-label>
+                            <ion-textarea [(ngModel)]="merma.observaciones" name="observaciones" placeholder="Observaciones..."></ion-textarea>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating">Fecha de insercion </ion-label>
+                            <ion-datetime displayFormat="DD/MM/YYYY" min="2019-01-01" max="2100-12-09" doneText="Seleccionar" cancelText="Cancelar" [(ngModel)]="merma.fecha" name="fecha"></ion-datetime>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating">Fecha de modificacion </ion-label>
+                            <ion-datetime displayFormat="DD/MM/YYYY" min="2019-01-01" max="2100-12-09" doneText="Seleccionar" cancelText="Cancelar" [(ngModel)]="merma.fecha" name="fecha"></ion-datetime>
+                        </ion-item>
+                      
+                           -->
+
+                
+
+                      
+
+
+
+
+
+                    </div>
+                    <div class="ion-padding" *ngIf="canChange">
+                        <ion-button type="submit" [disabled]="form.invalid" expand="block">
+                            Guardar
+                        </ion-button>
+                    </div>
+                      <div class="ion-padding"  >
+                        <ion-button  expand="block" (click)="goTolist()" >
+                            Ver Todos los Proveedores  
+                        </ion-button>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
+
+  
+</ion-content>

@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>Mermas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+   <!-- <ion-card *ngFor="let merma of mermas" (click)="editMerma(merma.id)">
+        <ion-img [src]="merma.imagen" ></ion-img>
+
+        <ion-card-header>
+            <ion-card-subtitle><b>Fecha:</b> {{merma.fecha|date:'dd/MM/y'}}  <b>Cantidad:</b>{{merma.cantidad}}</ion-card-subtitle>
+            <ion-card-title><b>Producto:</b> {{merma.producto.nombre}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+           <p>
+               {{merma.observaciones}}
+           </p>
+        </ion-card-content>
+    </ion-card>-->
+
+    <ion-list>
+        <ion-item *ngFor="let merma of mermas" (click)="editMerma(merma.idproveedor)">
+       
+            <ion-label>
+                <h2>{{merma.razonsocial}}</h2>
+                <h3>{{merma.fechaInsercion|date:'dd/MM/y'}}</h3>
+                <p><b>telefono: </b> {{merma.telefono}}</p>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+     <!--   <ion-infinite-scroll threshold="5%" (ionInfinite)="loadMore($event)">
+        <ion-infinite-scroll-content loading-spinner="bubbles" loading-text="Cargando mermas...">
+
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+-->
+   <!-- <ion-virtual-scroll [items]="mermas" approx-item-height="400px">
+        <ion-card *virtualItem="let merma" (click)="editMerma(merma.id)">
+            <ion-img [src]="merma.imagen" ></ion-img>
+            <ion-card-header>
+                <ion-card-subtitle><b>Fecha:</b> {{merma.fecha|date:'dd/MM/y'}}  <b>Cantidad:</b>{{merma.cantidad}}</ion-card-subtitle>
+                <ion-card-title><b>Producto:</b> {{merma.producto.nombre}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <p>
+                    {{merma.observaciones}}
+
+
+                </p>
+            </ion-card-content>
+        </ion-card>
+
+    </ion-virtual-scroll>
+-->
+
+</ion-content>

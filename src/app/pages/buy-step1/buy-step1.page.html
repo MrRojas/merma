@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Registrar Comprar (Seleccionar Proveedor)</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="default" overflow-scroll="true">
+  <form #form="ngForm" (ngSubmit)="save(form)">
+      <ion-grid>
+          <ion-row color="primary">
+              <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+                  <div class="ion-padding">
+                     
+        
+                    <ion-item>
+                      <ion-label position="floating">Proveedor</ion-label>
+
+                      <ion-select [(ngModel)]="provee" name="categoria" interface="popover" multiple="false" placeholder="Selecciona un proveedor">
+
+
+
+                        <ion-select-option *ngFor="let pro of proveedores" value="{{pro.idProveedor}}">{{pro.razonSocial}}</ion-select-option>
+                    </ion-select>
+                  
+                  </ion-item>
+
+
+
+                      <ion-item>
+                        <ion-label position="floating">Numero de Factura</ion-label>
+                        <ion-textarea [(ngModel)]="factura" name="factura" placeholder="Ingrese Numero de la Factura"></ion-textarea>
+                    </ion-item>  
+
+                  </div>
+              
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+  </form>
+
+
+</ion-content>
+<ion-footer>
+  
+      
+                <ion-button ion-padding expand="block" (click)="goTolist()"  >
+                           Seguir con la Compra
+				</ion-button>
+    
+  
+</ion-footer>

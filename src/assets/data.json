@@ -1,0 +1,100 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Coca Cola",
+      "codigoContenido": "1234",
+      "codigoVacio": "56789"
+    },
+    {
+      "id": 2,
+      "nombre": "Fanta Guaraná",
+      "codigoContenido": "33333",
+      "codigoVacio": "22222"
+    },
+    {
+      "id": 3,
+      "nombre": "Sprite",
+      "codigoContenido": "5555",
+      "codigoVacio": "22123"
+    },
+    {
+      "id": 4,
+      "nombre": "Fanta Naranja",
+      "codigoContenido": "34234",
+      "codigoVacio": "222111122"
+    }
+  ],
+  "usuarios": [
+    {
+      "username": "admin",
+      "password": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
+    },
+    {
+      "username": "juanber",
+      "password": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
+    },
+    {
+      "username": "asaniu",
+      "password": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
+    }
+  ],
+  "tipoDocumento": [
+    {
+      "id": 1,
+      "nombre": "M"
+    },
+    {
+      "id": 2,
+      "nombre": "Tarde"
+    },
+    {
+      "id": 3,
+      "nombre": "Noche"
+    }
+  ],
+  "tipos": [
+    {
+      "id": 1,
+      "nombre": "Contenido"
+    },
+    {
+      "id": 2,
+      "nombre": "Vacío"
+    }
+  ],
+  "sectores": [
+    {
+      "id": 1,
+      "nombre": "Sector 1"
+    },
+    {
+      "id": 2,
+      "nombre": "Sector 2"
+    },
+    {
+      "id": 3,
+      "nombre": "Sector 3"
+    }
+  ],
+  "motivos": [
+    {
+      "id": 1,
+      "nombre": "Caída"
+    },
+    {
+      "id": 2,
+      "nombre": "Explosión"
+    }
+  ],
+  "unidadesDeMedida":[
+    {
+      "id": 1,
+      "nombre": "Unidad"
+    },
+    {
+      "id": 2,
+      "nombre": "Litro"
+    }
+  ]
+}
